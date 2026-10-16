@@ -1,0 +1,10 @@
+/* Aggressive background: also clears Steam's full-screen containers so the
+   custom background shows everywhere (hides dynamic game art).
+   If something looks wrong, switch Background Mode back to "Behind Steam art". */
+#root,
+[class*="gamepadui_Content"],
+[class*="gamepadui_GamepadUI"],
+[class*="gamepadhome_Container"],
+[class*="gamepadhome_GamepadHome"] {
+  background: transparent !important;
+}

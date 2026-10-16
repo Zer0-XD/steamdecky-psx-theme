@@ -1,0 +1,6 @@
+:root {
+  --ds-o-bg: radial-gradient(1400px 800px at 75% -10%,
+    color-mix(in srgb, var(--ds-custom-bg, #12306b) 100%, white 14%) 0%,
+    var(--ds-custom-bg, #12306b) 40%,
+    color-mix(in srgb, var(--ds-custom-bg, #12306b) 25%, black) 100%);
+}

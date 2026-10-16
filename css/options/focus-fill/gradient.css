@@ -1,0 +1,4 @@
+:root {
+  --ds-o-focus-bg: var(--ds-accent-grad);
+  --ds-o-focus-fg: #ffffff;
+}

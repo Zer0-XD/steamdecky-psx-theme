@@ -1,0 +1,10 @@
+/* Transparent header / status bar (PS5-style floating top bar). */
+[class*="gamepadtabbedpage_TabHeaderRowWrapper"],
+[class*="gamepadui_TopBar"],
+[class*="gamepadui_Header"],
+[class*="statusbar_"] {
+  background: transparent !important;
+  backdrop-filter: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}

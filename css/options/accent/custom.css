@@ -1,0 +1,4 @@
+:root {
+  --ds-o-accent: var(--ds-custom-accent, #1f7cff);
+  --ds-o-accent-2: var(--ds-custom-accent-2, #2bd45c);
+}

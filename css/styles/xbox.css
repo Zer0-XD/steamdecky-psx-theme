@@ -1,0 +1,21 @@
+/* STYLE: Xbox - charcoal/green, near-square tiles, restrained zoom, green focus */
+:root {
+  --ds-s-accent: #1e9e2f;
+  --ds-s-accent-2: #9bf00b;
+  --ds-s-bg: radial-gradient(1200px 700px at 18% -5%, #17341c 0%, #0b140d 45%, #050605 100%);
+  --ds-s-radius: 3px;
+  --ds-s-scale: 1.05;
+  --ds-s-dim: 0.78;
+  --ds-s-speed: 160ms;
+  --ds-s-ring-color: #ffffff;
+  --ds-s-ring-w: 3px;
+  --ds-s-ring-extra: 0 0 0 0 transparent;
+  --ds-s-glow: 0 0 22px 0 var(--ds-accent-2-glow);
+  --ds-s-focus-bg: var(--ds-accent);
+  --ds-s-focus-fg: #ffffff;
+  --ds-s-focus-line: var(--ds-accent-2);
+  --ds-s-tab-sel-bg: transparent;
+  --ds-s-tab-sel-line: var(--ds-accent-2);
+  --ds-s-panel-bg: rgba(14, 20, 15, 0.78);
+  --ds-s-blur: 20px;
+}

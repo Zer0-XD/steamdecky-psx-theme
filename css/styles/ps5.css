@@ -1,0 +1,21 @@
+/* STYLE: PS5 - deep blue, big soft zoom, white ring, strong spotlight dimming */
+:root {
+  --ds-s-accent: #0070d1;
+  --ds-s-accent-2: #5fb0ff;
+  --ds-s-bg: radial-gradient(1400px 800px at 78% -10%, #1b4fa8 0%, #0a1733 46%, #03060f 100%);
+  --ds-s-radius: 14px;
+  --ds-s-scale: 1.14;
+  --ds-s-dim: 0.5;
+  --ds-s-speed: 240ms;
+  --ds-s-ring-color: #ffffff;
+  --ds-s-ring-w: 3px;
+  --ds-s-ring-extra: 0 0 0 0 transparent;
+  --ds-s-glow: 0 0 44px 6px var(--ds-accent-glow);
+  --ds-s-focus-bg: #ffffff;
+  --ds-s-focus-fg: #0b1020;
+  --ds-s-focus-line: transparent;
+  --ds-s-tab-sel-bg: rgba(255, 255, 255, 0.18);
+  --ds-s-tab-sel-line: transparent;
+  --ds-s-panel-bg: rgba(10, 18, 38, 0.6);
+  --ds-s-blur: 30px;
+}

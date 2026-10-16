@@ -1,0 +1,5 @@
+/* Re-colour Steam's own accent so toggles, sliders and highlights follow your accent. */
+:root {
+  --gpColor-Blue: var(--ds-accent) !important;
+  --gpColor-BlueHi: var(--ds-accent-2) !important;
+}

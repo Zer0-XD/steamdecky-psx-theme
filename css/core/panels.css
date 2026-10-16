@@ -1,0 +1,5 @@
+/* Quick Access Menu (QAM) + Steam button menu: glass panels */
+html, body {
+  background: var(--ds-panel-bg) !important;
+  backdrop-filter: blur(var(--ds-blur)) saturate(1.25);
+}

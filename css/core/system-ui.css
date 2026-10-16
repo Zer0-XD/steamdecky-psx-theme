@@ -1,0 +1,18 @@
+/* System-wide focus language for buttons, rows and fields (SP, QAM, Steam menu). */
+:is([class*="gamepaddialog_Button"], .DialogButton, [class*="gamepaddialog_Field_"]) {
+  border-radius: var(--ds-radius-sm) !important;
+  transition:
+    background var(--ds-speed) var(--ds-ease),
+    color var(--ds-speed) var(--ds-ease),
+    box-shadow var(--ds-speed) var(--ds-ease);
+}
+:is([class*="gamepaddialog_Button"], .DialogButton, [class*="gamepaddialog_Field_"]).gpfocus {
+  background: var(--ds-focus-bg) !important;
+  color: var(--ds-focus-fg) !important;
+  box-shadow: 0 0 0 2px var(--ds-focus-line), 0 0 24px var(--ds-accent-soft);
+}
+:is([class*="gamepaddialog_Button"], .DialogButton, [class*="gamepaddialog_Field_"]).gpfocus
+  :is([class*="gamepaddialog_FieldLabel"], [class*="gamepaddialog_FieldChildren"],
+      [class*="gamepaddialog_FieldDescription"], svg) {
+  color: var(--ds-focus-fg) !important;
+}

@@ -1,0 +1,4 @@
+:root {
+  --ds-o-bg: radial-gradient(1400px 800px at 82% -10%, #1b4fa8 0%, transparent 60%),
+    radial-gradient(900px 600px at 0% 110%, #0d5a2b 0%, transparent 60%), #050913;
+}

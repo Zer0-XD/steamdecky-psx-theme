@@ -1,0 +1,35 @@
+/* =====================================================================
+   Game tiles: radius, focus zoom, ring, glow, dim-the-others.
+   Uses the individual `scale` property (not `transform`) because Steam
+   positions the carousel with transforms from JavaScript.
+   TILE SELECTORS (edit here if Valve renames classes - see TUNING.md):
+   .Focusable[class*="appportrait_"], .Focusable:has(> [class*="appportrait_"]), [class*="gamepadhome_"] .Focusable:has(> img)
+   ===================================================================== */
+:is(.Focusable[class*="appportrait_"], .Focusable:has(> [class*="appportrait_"]), [class*="gamepadhome_"] .Focusable:has(> img)) {
+  border-radius: var(--ds-radius) !important;
+  overflow: hidden;
+  scale: 1;
+  transition:
+    scale var(--ds-speed) var(--ds-ease),
+    filter var(--ds-speed) var(--ds-ease),
+    box-shadow var(--ds-speed) var(--ds-ease);
+}
+:is(.Focusable[class*="appportrait_"], .Focusable:has(> [class*="appportrait_"]), [class*="gamepadhome_"] .Focusable:has(> img)) img {
+  border-radius: inherit;
+}
+
+/* dim every tile that is not focused - only while a tile has focus */
+:root:has(:is(.Focusable[class*="appportrait_"], .Focusable:has(> [class*="appportrait_"]), [class*="gamepadhome_"] .Focusable:has(> img)).gpfocus)
+  :is(.Focusable[class*="appportrait_"], .Focusable:has(> [class*="appportrait_"]), [class*="gamepadhome_"] .Focusable:has(> img)):not(.gpfocus):not(.gpfocuswithin) {
+  filter: brightness(var(--ds-dim)) saturate(0.9);
+}
+
+/* focused tile */
+:is(.Focusable[class*="appportrait_"], .Focusable:has(> [class*="appportrait_"]), [class*="gamepadhome_"] .Focusable:has(> img)):is(.gpfocus, .gpfocuswithin) {
+  scale: var(--ds-scale);
+  z-index: 10;
+  box-shadow:
+    0 0 0 var(--ds-ring-w) var(--ds-ring-color),
+    var(--ds-ring-extra),
+    var(--ds-glow);
+}

@@ -1,0 +1,3 @@
+html, body, button, input, [class*="gamepad"], [class*="quickaccess"], [class*="mainmenu"], .DialogButton {
+  font-family: "SST", "Inter", "Roboto", "Noto Sans", "Helvetica Neue", sans-serif !important;
+}

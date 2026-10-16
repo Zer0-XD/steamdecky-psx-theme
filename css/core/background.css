@@ -1,0 +1,6 @@
+/* Safe background: paints the base canvas behind Steam's own layers,
+   so dynamic game art on the home screen keeps working. */
+html, body {
+  background: var(--ds-bg) !important;
+  background-attachment: fixed !important;
+}

@@ -1,0 +1,50 @@
+/* =====================================================================
+   PS5 x Xbox Hybrid - variable resolution (injected into every tab)
+   Priority for every setting:
+     --ds-o-*  (user override chosen in the theme options)
+     --ds-s-*  (default of the selected Style: Hybrid / PS5 / Xbox)
+     hard-coded fallback below
+   ===================================================================== */
+:root {
+  /* palette */
+  --ds-accent: var(--ds-o-accent, var(--ds-s-accent, #1f7cff));
+  --ds-accent-2: var(--ds-o-accent-2, var(--ds-s-accent-2, #2bd45c));
+  --ds-accent-grad: linear-gradient(90deg, var(--ds-accent), var(--ds-accent-2));
+  --ds-accent-soft: color-mix(in srgb, var(--ds-accent) 28%, transparent);
+  --ds-accent-glow: color-mix(in srgb, var(--ds-accent) 55%, transparent);
+  --ds-accent-2-glow: color-mix(in srgb, var(--ds-accent-2) 55%, transparent);
+
+  /* background (full `background` shorthand value) */
+  --ds-bg: var(--ds-o-bg, var(--ds-s-bg,
+    radial-gradient(1400px 800px at 82% -10%, #1b4fa8 0%, transparent 60%),
+    radial-gradient(900px 600px at 0% 110%, #0d5a2b 0%, transparent 60%),
+    #050913));
+
+  /* shape + motion */
+  --ds-radius: var(--ds-o-radius, var(--ds-s-radius, 8px));
+  --ds-radius-sm: calc(var(--ds-radius) * 0.6);
+  --ds-radius-lg: calc(var(--ds-radius) * 1.6);
+  --ds-scale: var(--ds-o-scale, var(--ds-s-scale, 1.1));
+  --ds-dim: var(--ds-o-dim, var(--ds-s-dim, 0.6));
+  --ds-speed: var(--ds-o-speed, var(--ds-s-speed, 200ms));
+  --ds-ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* tile focus ring + glow */
+  --ds-ring-color: var(--ds-o-ring-color, var(--ds-s-ring-color, #ffffff));
+  --ds-ring-w: var(--ds-o-ring-w, var(--ds-s-ring-w, 3px));
+  --ds-ring-extra: var(--ds-o-ring-extra, var(--ds-s-ring-extra, 0 0 0 0 transparent));
+  --ds-glow: var(--ds-o-glow, var(--ds-s-glow, 0 0 40px 4px var(--ds-accent-glow)));
+
+  /* focus fill for buttons / rows / tabs */
+  --ds-focus-bg: var(--ds-o-focus-bg, var(--ds-s-focus-bg, #ffffff));
+  --ds-focus-fg: var(--ds-o-focus-fg, var(--ds-s-focus-fg, #0b1020));
+  --ds-focus-line: var(--ds-o-focus-line, var(--ds-s-focus-line, transparent));
+
+  /* tabs */
+  --ds-tab-sel-bg: var(--ds-o-tab-sel-bg, var(--ds-s-tab-sel-bg, rgba(255, 255, 255, 0.12)));
+  --ds-tab-sel-line: var(--ds-o-tab-sel-line, var(--ds-s-tab-sel-line, var(--ds-accent)));
+
+  /* side panels (Quick Access, Steam menu) */
+  --ds-panel-bg: var(--ds-o-panel-bg, var(--ds-s-panel-bg, rgba(10, 16, 32, 0.6)));
+  --ds-blur: var(--ds-o-blur, var(--ds-s-blur, 28px));
+}

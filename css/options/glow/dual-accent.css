@@ -1,0 +1,4 @@
+:root {
+  --ds-o-glow: -12px 0 40px -4px var(--ds-accent-glow),
+    12px 0 40px -4px var(--ds-accent-2-glow);
+}

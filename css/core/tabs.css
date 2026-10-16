@@ -1,0 +1,15 @@
+/* Top tabs (Home / Library / Store ...). Class names confirmed in the
+   official CSS Loader docs: gamepadtabbedpage_Tab_ / gamepadtabbedpage_Selected_ */
+[class*="gamepadtabbedpage_Tab_"] {
+  border-radius: var(--ds-radius-lg);
+  transition: background var(--ds-speed) var(--ds-ease), color var(--ds-speed) var(--ds-ease);
+}
+[class*="gamepadtabbedpage_Tab_"][class*="gamepadtabbedpage_Selected_"]:not(.gpfocus) {
+  background: var(--ds-tab-sel-bg) !important;
+  box-shadow: inset 0 -3px 0 var(--ds-tab-sel-line);
+}
+[class*="gamepadtabbedpage_Tab_"].gpfocus {
+  background: var(--ds-focus-bg) !important;
+  color: var(--ds-focus-fg) !important;
+  box-shadow: 0 0 0 2px var(--ds-focus-line), 0 0 22px var(--ds-accent-soft);
+}

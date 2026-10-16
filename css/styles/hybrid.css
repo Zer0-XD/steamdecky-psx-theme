@@ -1,0 +1,24 @@
+/* STYLE: Hybrid - PlayStation motion + dim/zoom, Xbox tile geometry + dual accent */
+:root {
+  --ds-s-accent: #1f7cff;
+  --ds-s-accent-2: #2bd45c;
+  --ds-s-bg:
+    radial-gradient(1400px 800px at 82% -10%, #1b4fa8 0%, transparent 60%),
+    radial-gradient(900px 600px at 0% 110%, #0d5a2b 0%, transparent 60%),
+    #050913;
+  --ds-s-radius: 8px;
+  --ds-s-scale: 1.1;
+  --ds-s-dim: 0.6;
+  --ds-s-speed: 200ms;
+  --ds-s-ring-color: #ffffff;
+  --ds-s-ring-w: 3px;
+  --ds-s-ring-extra: 0 0 0 6px color-mix(in srgb, var(--ds-accent-2) 70%, transparent);
+  --ds-s-glow: 0 0 40px 4px var(--ds-accent-glow);
+  --ds-s-focus-bg: #ffffff;
+  --ds-s-focus-fg: #0b1020;
+  --ds-s-focus-line: var(--ds-accent-2);
+  --ds-s-tab-sel-bg: rgba(255, 255, 255, 0.12);
+  --ds-s-tab-sel-line: var(--ds-accent-2);
+  --ds-s-panel-bg: rgba(10, 16, 32, 0.6);
+  --ds-s-blur: 28px;
+}

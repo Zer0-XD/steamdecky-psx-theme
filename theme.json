@@ -1,0 +1,721 @@
+{
+  "name": "PS5-Xbox-Hybrid",
+  "display_name": "PS5 x Xbox Hybrid",
+  "author": "Zero",
+  "version": "v1.0.0",
+  "manifest_version": 9,
+  "target": "System-Wide",
+  "description": "System-wide console-style theme: PS5 motion and spotlight focus blended with Xbox tile geometry and green accents. Style presets plus fine-grained options.",
+  "inject": {
+    "css/core/vars.css": [
+      "SP",
+      "QuickAccess",
+      "MainMenu"
+    ],
+    "css/core/background.css": [
+      "SP"
+    ],
+    "css/core/panels.css": [
+      "QuickAccess",
+      "MainMenu"
+    ],
+    "css/core/tabs.css": [
+      "SP"
+    ],
+    "css/home/tiles.css": [
+      "SP"
+    ]
+  },
+  "patches": {
+    "1. Style": {
+      "default": "Hybrid",
+      "type": "dropdown",
+      "values": {
+        "Hybrid": {
+          "css/styles/hybrid.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "PS5": {
+          "css/styles/ps5.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Xbox": {
+          "css/styles/xbox.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "2. Accent Color": {
+      "default": "Style Default",
+      "type": "dropdown",
+      "values": {
+        "Style Default": {},
+        "PlayStation Blue": {
+          "css/options/accent/playstation-blue.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Xbox Green": {
+          "css/options/accent/xbox-green.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Blue to Green": {
+          "css/options/accent/blue-to-green.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Purple": {
+          "css/options/accent/purple.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Magenta": {
+          "css/options/accent/magenta.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Orange": {
+          "css/options/accent/orange.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Red": {
+          "css/options/accent/red.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Cyan": {
+          "css/options/accent/cyan.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Gold": {
+          "css/options/accent/gold.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Custom": {
+          "css/options/accent/custom.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Custom Accent",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#1f7cff",
+          "css_variable": "ds-custom-accent",
+          "tabs": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        {
+          "name": "Custom Accent 2",
+          "type": "color-picker",
+          "on": "Custom",
+          "default": "#2bd45c",
+          "css_variable": "ds-custom-accent-2",
+          "tabs": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      ]
+    },
+    "3. Background": {
+      "default": "Style Default",
+      "type": "dropdown",
+      "values": {
+        "Style Default": {},
+        "PS5 Deep Blue": {
+          "css/options/background/ps5-deep-blue.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Xbox Charcoal": {
+          "css/options/background/xbox-charcoal.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Aurora": {
+          "css/options/background/aurora.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Graphite": {
+          "css/options/background/graphite.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "OLED Black": {
+          "css/options/background/oled-black.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Custom Color": {
+          "css/options/background/custom-color.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Custom Image": {
+          "css/options/background/custom-image.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      },
+      "components": [
+        {
+          "name": "Background Color",
+          "type": "color-picker",
+          "on": "Custom Color",
+          "default": "#12306b",
+          "css_variable": "ds-custom-bg",
+          "tabs": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        {
+          "name": "Wallpaper",
+          "type": "image-picker",
+          "on": "Custom Image",
+          "default": "PS5-Xbox-Hybrid/wallpapers/default.jpg",
+          "css_variable": "ds-wallpaper",
+          "tabs": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      ]
+    },
+    "4. Wallpaper Darkness": {
+      "default": "Medium",
+      "type": "slider",
+      "values": {
+        "None": {
+          "css/options/img-dim/none.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Light": {
+          "css/options/img-dim/light.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Medium": {
+          "css/options/img-dim/medium.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Dark": {
+          "css/options/img-dim/dark.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Very Dark": {
+          "css/options/img-dim/very-dark.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "5. Background Mode": {
+      "default": "Behind Steam art",
+      "type": "dropdown",
+      "values": {
+        "Behind Steam art": {},
+        "Replace everything": {
+          "css/home/bg-aggressive.css": [
+            "SP"
+          ]
+        }
+      }
+    },
+    "6. Corner Radius": {
+      "default": "Style Default",
+      "type": "slider",
+      "values": {
+        "Style Default": {},
+        "Sharp": {
+          "css/options/radius/sharp.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Slight": {
+          "css/options/radius/slight.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Soft": {
+          "css/options/radius/soft.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Rounded": {
+          "css/options/radius/rounded.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Round": {
+          "css/options/radius/round.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Pill": {
+          "css/options/radius/pill.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "7. Focus Zoom": {
+      "default": "Style Default",
+      "type": "slider",
+      "values": {
+        "Style Default": {},
+        "Off": {
+          "css/options/zoom/off.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Subtle": {
+          "css/options/zoom/subtle.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Medium": {
+          "css/options/zoom/medium.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Large": {
+          "css/options/zoom/large.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Huge": {
+          "css/options/zoom/huge.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "8. Dim Unfocused Tiles": {
+      "default": "Style Default",
+      "type": "slider",
+      "values": {
+        "Style Default": {},
+        "Off": {
+          "css/options/dim/off.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Light": {
+          "css/options/dim/light.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Medium": {
+          "css/options/dim/medium.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Strong": {
+          "css/options/dim/strong.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Spotlight": {
+          "css/options/dim/spotlight.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "9. Tile Ring": {
+      "default": "Style Default",
+      "type": "dropdown",
+      "values": {
+        "Style Default": {},
+        "None": {
+          "css/options/ring/none.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "White": {
+          "css/options/ring/white.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Accent": {
+          "css/options/ring/accent.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Accent 2": {
+          "css/options/ring/accent-2.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "White + Accent": {
+          "css/options/ring/white-accent.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "White + Accent 2": {
+          "css/options/ring/white-accent-2.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "10. Tile Glow": {
+      "default": "Style Default",
+      "type": "dropdown",
+      "values": {
+        "Style Default": {},
+        "Off": {
+          "css/options/glow/off.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Soft": {
+          "css/options/glow/soft.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Strong": {
+          "css/options/glow/strong.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Dual Accent": {
+          "css/options/glow/dual-accent.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "11. Focus Fill": {
+      "default": "Style Default",
+      "type": "dropdown",
+      "values": {
+        "Style Default": {},
+        "White (PS5)": {
+          "css/options/focus-fill/white-ps5.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Accent (Xbox)": {
+          "css/options/focus-fill/accent-xbox.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Gradient": {
+          "css/options/focus-fill/gradient.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Glass": {
+          "css/options/focus-fill/glass.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "12. Tab Style": {
+      "default": "Style Default",
+      "type": "dropdown",
+      "values": {
+        "Style Default": {},
+        "Pill": {
+          "css/options/tabs/pill.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Underline": {
+          "css/options/tabs/underline.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Pill + Underline": {
+          "css/options/tabs/pill-underline.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Plain": {
+          "css/options/tabs/plain.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "13. Animation Speed": {
+      "default": "Style Default",
+      "type": "slider",
+      "values": {
+        "Style Default": {},
+        "Instant": {
+          "css/options/speed/instant.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Fast": {
+          "css/options/speed/fast.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Normal": {
+          "css/options/speed/normal.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Smooth": {
+          "css/options/speed/smooth.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Cinematic": {
+          "css/options/speed/cinematic.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "14. Side Panels": {
+      "default": "Style Default",
+      "type": "dropdown",
+      "values": {
+        "Style Default": {},
+        "Frosted Glass": {
+          "css/options/panels/frosted-glass.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Solid": {
+          "css/options/panels/solid.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Clear": {
+          "css/options/panels/clear.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "15. Font": {
+      "default": "Steam Default",
+      "type": "dropdown",
+      "values": {
+        "Steam Default": {},
+        "Xbox (Segoe style)": {
+          "css/options/font/xbox-segoe-style.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "PlayStation (SST style)": {
+          "css/options/font/playstation-sst-style.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        },
+        "Rounded": {
+          "css/options/font/rounded.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "16. Transparent Top Bar": {
+      "default": "Yes",
+      "type": "checkbox",
+      "values": {
+        "No": {},
+        "Yes": {
+          "css/core/topbar-transparent.css": [
+            "SP"
+          ]
+        }
+      }
+    },
+    "17. Recolor Steam Accent": {
+      "default": "Yes",
+      "type": "checkbox",
+      "values": {
+        "No": {},
+        "Yes": {
+          "css/core/system-colors.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    },
+    "18. Restyle Buttons & Rows": {
+      "default": "Yes",
+      "type": "checkbox",
+      "values": {
+        "No": {},
+        "Yes": {
+          "css/core/system-ui.css": [
+            "SP",
+            "QuickAccess",
+            "MainMenu"
+          ]
+        }
+      }
+    }
+  }
+}
